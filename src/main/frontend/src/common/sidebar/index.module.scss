@@ -1,6 +1,33 @@
 .container {
-    padding: 0 20px;
-    width: 240px;
-    height: calc(var(--vh) * 100 - 56px);
-    background: #262f38;
+	padding: 0 20px;
+	width: 240px;
+	height: calc(var(--vh) * 100 - 56px);
+	background: #262f38;
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: 30px 0;
+		color: #ffffff;
+		li {
+			font-size: 1rem;
+			font-weight: 600;
+			list-style: none;
+			a {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				color: #ffffff;
+				text-decoration: none;
+				transition: all 0.2s;
+				&:hover {
+					color: red;
+				}
+				svg {
+					width: 1rem;
+					height: 1rem;
+				}
+			}
+		}
+	}
 }
