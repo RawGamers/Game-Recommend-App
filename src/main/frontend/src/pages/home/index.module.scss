@@ -1,8 +1,4 @@
 .container {
-    nav {
-        ul {
-            display: flex;
-            list-style: none;
-        }
-    }
+	width: calc(100% - 240px);
+	background: #5b4848;
 }

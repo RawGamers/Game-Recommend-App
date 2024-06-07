@@ -1,22 +1,36 @@
 import styles from "./index.module.scss";
+import Nav from "../../components/home/nav";
+import List from "../../components/home/list";
+import { useEffect, useState } from "react";
 
 const Home = () => {
-    return (
-        <div className={styles.container}>
-            <nav>
-                <ul>
-                    <li>롤플레잉</li>
-                    <li>플랫포머</li>
-                    <li>액션</li>
-                    <li>인디</li>
-                </ul>
-            </nav>
-            <main>
-                <section>section1</section>
-                <section>section2</section>
-            </main>
-        </div>
-    );
+	const [selectedKeyword, setSelectedKeyword] = useState(null);
+
+	const handleKeywordSelect = (keyword) => {
+		setSelectedKeyword(keyword);
+	};
+
+	useEffect(() => {
+		console.log(selectedKeyword);
+	}, [selectedKeyword]);
+
+	// const popularData = useFetch()
+	// const newData = useFetch()
+
+	return (
+		<div className={styles.container}>
+			<Nav selectedKeyWord={handleKeywordSelect} />
+			<main>
+				<h1>selected Keyword</h1>
+				<List type={{ keyword: selectedKeyword }} />
+
+				<h2>걍 리스트</h2>
+				{/* {gameType.map((data, index) => (
+					<List data={data} />
+				))} */}
+			</main>
+		</div>
+	);
 };
 
 export default Home;
