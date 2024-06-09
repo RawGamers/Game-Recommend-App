@@ -1,0 +1,11 @@
+section {
+	.list_container {
+		display: flex;
+		gap: 10px;
+		.list_wrapper {
+			width: 200px;
+			height: 100px;
+			background: red;
+		}
+	}
+}

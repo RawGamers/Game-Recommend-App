@@ -1,8 +1,14 @@
 .container {
+	position: fixed;
+	left: 0;
 	padding: 0 20px;
 	width: 240px;
-	height: calc(var(--vh) * 100 - 56px);
+	height: calc(100vh - 56px); // 임시
+	// height: calc(var(--vh) * 100 - 56px); // 임시
 	background: #262f38;
+	@media screen and (max-width: 480px) {
+		// display: none;
+	}
 	ul {
 		display: flex;
 		flex-direction: column;
