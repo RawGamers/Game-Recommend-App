@@ -1,6 +1,8 @@
-import styles from "./index.module.scss";
-import Nav from "../../components/home/nav";
-import List from "../../components/home/list";
+"use client";
+
+import styles from "./page.module.scss";
+import Nav from "../components/home/nav";
+import List from "../components/home/list";
 import { useEffect, useState } from "react";
 
 const Home = () => {

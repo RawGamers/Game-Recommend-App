@@ -1,9 +1,0 @@
-.container {
-	padding: 0 20px;
-	width: 240px;
-	height: calc(var(--vh) * 100 - 56px);
-	background: #262f38;
-	@media screen and (max-width: 480px) {
-		// display: none;
-	}
-}
