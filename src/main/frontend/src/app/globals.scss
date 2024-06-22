@@ -16,7 +16,7 @@ body {
 
 body {
 	margin: 0;
-	padding-top: 56px;
+	padding-top: 60px;
 	font-family: Pretendard;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -25,7 +25,6 @@ body {
 
 ul {
 	padding: 0;
-	list-style-position: inside;
 }
 
 p,
@@ -60,8 +59,11 @@ textarea {
 	font-family: Pretendard;
 }
 
-.content {
+.layout_content {
 	padding-left: 240px;
+	min-height: calc(var(--vh, 1vh) * 100 - 60px);
+	display: flex;
+	flex-direction: column;
 }
 
 .blank {
