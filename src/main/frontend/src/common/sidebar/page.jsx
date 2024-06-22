@@ -3,9 +3,8 @@ import { Board } from "../../assets/svg/icon-board.jsx";
 import styles from "./page.module.scss";
 
 const menus = [
-	{ path: "/auth/sign-in", name: "인기 게임", icon: Board },
-	{ path: "/", name: "신작 게임", icon: Board },
-	{ path: "/", name: "카테고리별 게임", icon: Board },
+	{ path: "/game", name: "인기 게임", query: "popular", icon: Board },
+	{ path: "/game", name: "신작 게임", query: "new", icon: Board },
 	{ path: "/", name: "게시판", icon: Board },
 ];
 
@@ -15,7 +14,7 @@ const SideBar = () => {
 			<ul>
 				{menus.map((menu, index) => (
 					<li key={index}>
-						<Link href={menu.path}>
+						<Link href={{ pathname: menu.path, query: menu.query || {} }}>
 							<menu.icon />
 							{menu.name}
 						</Link>
