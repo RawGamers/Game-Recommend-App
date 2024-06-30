@@ -19,16 +19,49 @@
 			color: #ff6224;
 		}
 	}
-	.btn_wrapper {
+	ul {
 		display: flex;
+		align-items: center;
 		gap: 10px;
+		list-style: none;
+		list-style-position: inside;
 		a {
 			padding: 5px 8px;
 			color: #ffffff;
 			border-radius: 4px;
 			font-size: 0.8rem;
+			white-space: nowrap;
 			&:hover {
 				background: #555555;
+			}
+		}
+		.search_input_container {
+			width: 80%;
+			form {
+				.search_input_wrapper {
+					position: relative;
+					height: 35px;
+					display: flex;
+					align-items: center;
+					svg {
+						position: absolute;
+						top: 50%;
+						left: 0.7rem;
+						transform: translate3d(0, -50%, 0);
+					}
+					input {
+						padding-left: 2.5rem;
+						padding-right: 0.5rem;
+						height: 100%;
+						border-radius: 0.25rem;
+						outline: none;
+						border: none;
+						font-size: 1rem;
+						&:focus {
+							outline: none;
+						}
+					}
+				}
 			}
 		}
 	}
