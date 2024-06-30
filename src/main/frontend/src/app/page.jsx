@@ -3,24 +3,16 @@
 import styles from "./page.module.scss";
 import Nav from "../components/home/nav";
 import List from "../components/home/list";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Home = () => {
-	const [selectedKeyword, setSelectedKeyword] = useState(null);
-
-	const handleKeywordSelect = (keyword) => {
-		setSelectedKeyword(keyword);
-	};
-
-	useEffect(() => {
-		console.log(selectedKeyword);
-	}, [selectedKeyword]);
+	const [activeCategory, setActiveCategory] = useState("all");
 
 	return (
 		<div className={styles.container}>
-			<Nav selectedKeyWord={handleKeywordSelect} />
+			<Nav activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 			<main>
-				<List type={{ keyword: selectedKeyword }} />
+				<List activeCategory={activeCategory} />
 			</main>
 		</div>
 	);

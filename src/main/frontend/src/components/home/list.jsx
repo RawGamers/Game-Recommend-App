@@ -3,23 +3,17 @@
 import { useEffect } from "react";
 import styles from "./list.module.scss";
 
-export const Nav = (props) => {
+export const List = ({ activeCategory }) => {
 	useEffect(() => {
-		console.log(props.type.keyword);
-	}, [props]);
+		console.log(activeCategory);
+	}, [activeCategory]);
 
 	return (
-		<>
-			<section>
-				<h2>{props.type.keyword}</h2>
-				<div className={styles.list_container}>
-					{/* {props.data.map((data) => (
-					))} */}
-					{/* <div className={styles.list_wrapper}>data</div> */}
-				</div>
-			</section>
-		</>
+		<section>
+			<h2>{activeCategory}</h2>
+			<div className={styles.list_container}></div>
+		</section>
 	);
 };
 
-export default Nav;
+export default List;
