@@ -3,8 +3,7 @@
 	left: 0;
 	padding: 0 20px;
 	width: 240px;
-	height: calc(100vh - 56px); // 임시
-	// height: calc(var(--vh) * 100 - 56px); // 임시
+	height: calc(var(--vh) * 100 - 60px);
 	background: #262f38;
 	@media screen and (max-width: 480px) {
 		// display: none;

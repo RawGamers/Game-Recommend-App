@@ -13,7 +13,7 @@ export const Nav = ({ selectedKeyWord }) => {
 		{ name: "슈팅", keyword: "shooting", active: false },
 	]);
 
-	const handleButtonClick = (index) => {
+	const changeCategory = (index) => {
 		setNavArray((prevNavArray) => {
 			const updatedNavArray = [...prevNavArray];
 			updatedNavArray.forEach((item, i) => {
@@ -32,12 +32,7 @@ export const Nav = ({ selectedKeyWord }) => {
 		<>
 			<nav>
 				{navArray.map((item, index) => (
-					<button
-						className={`${styles.nav_btn} ${item.active ? styles.active : ""}`}
-						key={index}
-						type="button"
-						onClick={() => handleButtonClick(index)}
-					>
+					<button key={index} className={`${styles.nav_btn} ${item.active ? styles.active : ""}`} onClick={() => changeCategory(index)} type="button">
 						{item.name}
 					</button>
 				))}

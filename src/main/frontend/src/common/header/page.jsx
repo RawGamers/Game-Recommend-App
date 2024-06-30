@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./page.module.scss";
+import { Search } from "@/assets/svg/icon-search.jsx";
 
 const Header = () => {
 	return (
@@ -7,10 +8,22 @@ const Header = () => {
 			<Link className={styles.logo} href="/">
 				RAW GAMES
 			</Link>
-			<div className={styles.btn_wrapper}>
-				<Link href="/auth/sign-in">로그인</Link>
-				<Link href="/auth/sign-up">회원가입</Link>
-			</div>
+			<ul>
+				<li className={styles.search_input_container}>
+					<form>
+						<div className={styles.search_input_wrapper}>
+							<Search />
+							<input type="search" autoComplete="off" placeholder="검색" />
+						</div>
+					</form>
+				</li>
+				<li>
+					<Link href="/auth/sign-in">로그인</Link>
+				</li>
+				<li>
+					<Link href="/auth/sign-up">회원가입</Link>
+				</li>
+			</ul>
 		</header>
 	);
 };

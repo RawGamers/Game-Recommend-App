@@ -15,7 +15,7 @@ export const Nav = (props) => {
 				<div className={styles.list_container}>
 					{/* {props.data.map((data) => (
 					))} */}
-					<div className={styles.list_wrapper}>data</div>
+					{/* <div className={styles.list_wrapper}>data</div> */}
 				</div>
 			</section>
 		</>
