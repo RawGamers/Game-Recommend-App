@@ -1,11 +1,40 @@
-section {
-	.list_container {
-		display: flex;
-		gap: 10px;
-		.list_wrapper {
-			width: 200px;
-			height: 100px;
-			background: red;
+.list_container {
+	margin: 10px 20px 40px 20px;
+	display: flex;
+	justify-content: center;
+	.list_wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 250px);
+		justify-content: center;
+		gap: 20px 15px;
+		width: 100%;
+		.list_item {
+			width: 250px;
+			background: rgb(90, 90, 90);
+			border-radius: 8px;
+			a {
+				display: inline-block;
+				padding: 15px 15px 20px 15px;
+				width: 100%;
+				height: 100%;
+				img {
+					width: 100%;
+					height: 150px;
+					border-radius: 4px;
+				}
+				h2 {
+					margin-top: 10px;
+					font-size: 1.5rem;
+					font-weight: 600;
+					color: #fff;
+				}
+				p {
+					margin-top: 5px;
+					font-size: 1rem;
+					font-weight: 400;
+					color: #fff;
+				}
+			}
 		}
 	}
 }

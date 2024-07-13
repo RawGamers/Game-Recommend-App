@@ -1,29 +1,7 @@
-"use client";
-
-import styles from "./page.module.scss";
-import Nav from "../components/home/nav";
-import List from "../components/home/list";
-import { useEffect, useState } from "react";
+import CategoryListWrapper from "../components/home/categoryListWrapper.jsx";
 
 const Home = () => {
-	const [selectedKeyword, setSelectedKeyword] = useState(null);
-
-	const handleKeywordSelect = (keyword) => {
-		setSelectedKeyword(keyword);
-	};
-
-	useEffect(() => {
-		console.log(selectedKeyword);
-	}, [selectedKeyword]);
-
-	return (
-		<div className={styles.container}>
-			<Nav selectedKeyWord={handleKeywordSelect} />
-			<main>
-				<List type={{ keyword: selectedKeyword }} />
-			</main>
-		</div>
-	);
+	return <CategoryListWrapper />;
 };
 
 export default Home;

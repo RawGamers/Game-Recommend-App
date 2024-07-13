@@ -1,0 +1,44 @@
+{
+	"role": [
+		{ "title": "Role-playing Game 1", "description": "Role-playing Game Description 1", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Role-playing Game 2", "description": "Role-playing Game Description 2", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Role-playing Game 3", "description": "Role-playing Game Description 3", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Role-playing Game 4", "description": "Role-playing Game Description 4", "thumbnailImg": "/img/game.jpg" }
+	],
+	"indie": [
+		{ "title": "Indie Game 1", "description": "Indie Game Description 1", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Indie Game 2", "description": "Indie Game Description 2", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Indie Game 3", "description": "Indie Game Description 3", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Indie Game 4", "description": "Indie Game Description 4", "thumbnailImg": "/img/game.jpg" }
+	],
+	"shooting": [
+		{ "title": "Shooting Game 1", "description": "Shooting Game Description 1", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Shooting Game 2", "description": "Shooting Game Description 2", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Shooting Game 3", "description": "Shooting Game Description 3", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Shooting Game 4", "description": "Shooting Game Description 4", "thumbnailImg": "/img/game.jpg" }
+	],
+	"rhythm": [
+		{ "title": "Rhythm Game 1", "description": "Rhythm Game Description 1", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Rhythm Game 2", "description": "Rhythm Game Description 2", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Rhythm Game 3", "description": "Rhythm Game Description 3", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Rhythm Game 4", "description": "Rhythm Game Description 4", "thumbnailImg": "/img/game.jpg" }
+	],
+	"survival": [
+		{ "title": "Survival Game 1", "description": "Survival Game Description 1", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Survival Game 2", "description": "Survival Game Description 2", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Survival Game 3", "description": "Survival Game Description 3", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Survival Game 4", "description": "Survival Game Description 4", "thumbnailImg": "/img/game.jpg" }
+	],
+	"platform": [
+		{ "title": "Platform Game 1", "description": "Platform Game Description 1", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Platform Game 2", "description": "Platform Game Description 2", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Platform Game 3", "description": "Platform Game Description 3", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Platform Game 4", "description": "Platform Game Description 4", "thumbnailImg": "/img/game.jpg" }
+	],
+	"simulation": [
+		{ "title": "Simulation Game 1", "description": "Simulation Game Description 1", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Simulation Game 2", "description": "Simulation Game Description 2", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Simulation Game 3", "description": "Simulation Game Description 3", "thumbnailImg": "/img/game.jpg" },
+		{ "title": "Simulation Game 4", "description": "Simulation Game Description 4", "thumbnailImg": "/img/game.jpg" }
+	]
+}
