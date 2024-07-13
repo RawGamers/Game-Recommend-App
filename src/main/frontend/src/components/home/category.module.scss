@@ -1,0 +1,26 @@
+.categoryContainer {
+	overflow-x: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	.category {
+		margin: 20px;
+		display: inline-flex;
+		gap: 0.75rem;
+		list-style: none;
+		.category_btn {
+			padding: 0.25rem 0.75rem;
+			border: 1px solid #d0c8c8;
+			border-radius: 1rem;
+			background: #222;
+			color: #fff;
+			white-space: nowrap;
+			&.active {
+				background: #9c9c9c;
+				color: #ffffff;
+			}
+		}
+	}
+}

@@ -2,6 +2,7 @@
 	font-family: "Pretendard";
 	src: url("../assets/font/PretendardVariable.woff2") format("woff2");
 	font-weight: 400 800;
+	font-display: swap;
 }
 
 * {
@@ -23,7 +24,12 @@ body {
 	overflow-x: hidden;
 }
 
+a {
+	text-decoration: none;
+}
+
 ul {
+	list-style: none;
 	padding: 0;
 }
 
@@ -40,9 +46,11 @@ button {
 	margin: 0;
 }
 
+video,
 svg,
 img {
 	vertical-align: bottom;
+	object-fit: cover;
 }
 
 button {
