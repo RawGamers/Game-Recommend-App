@@ -2,6 +2,7 @@
 
 import styles from "./category.module.scss";
 import { useRef } from "react";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 export const Category = ({ activeCategory, setActiveCategory }) => {
 	const categoryArray = [
@@ -21,6 +22,11 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 
 	const changeCategory = (keyword) => {
 		setActiveCategory(keyword);
+		fetch(`api/test`)
+			.then((res) => {
+				console.log("응답 ->", res);
+			})
+		console.log("hi");
 	};
 
 	const handleMouseDown = (e) => {
