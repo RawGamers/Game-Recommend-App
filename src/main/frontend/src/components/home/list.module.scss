@@ -4,32 +4,45 @@
 	justify-content: center;
 	.list_wrapper {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, 250px);
-		justify-content: center;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		gap: 20px 15px;
 		width: 100%;
 		.list_item {
-			width: 250px;
-			background: rgb(90, 90, 90);
+			background: rgb(56, 56, 56);
 			border-radius: 8px;
+			box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.5);
+			transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+			will-change: box-shadow, transform;
+			&:hover {
+				transform: translate3d(0, -3px, 0);
+				box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.5);
+			}
 			a {
-				display: inline-block;
-				padding: 15px 15px 20px 15px;
+				padding: 15px 15px 10px 15px;
+				display: inline-flex;
+				flex-direction: column;
+				gap: 5px;
 				width: 100%;
 				height: 100%;
 				img {
 					width: 100%;
 					height: 150px;
 					border-radius: 4px;
+					transition: transform 0.3s ease;
 				}
 				h2 {
-					margin-top: 10px;
+					margin-top: 5px;
 					font-size: 1.5rem;
 					font-weight: 600;
 					color: #fff;
 				}
-				p {
-					margin-top: 5px;
+				.description {
+					font-size: 1rem;
+					font-weight: 400;
+					color: #fff;
+				}
+				.rating {
+					text-align: right;
 					font-size: 1rem;
 					font-weight: 400;
 					color: #fff;

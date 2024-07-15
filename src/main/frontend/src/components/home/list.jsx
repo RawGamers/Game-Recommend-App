@@ -11,13 +11,14 @@ export const List = ({ categoryData }) => {
 				<div className={styles.list_wrapper}>
 					{categoryData.map((item, index) => (
 						<div key={index} className={styles.list_item}>
-							<Link href="/">
+							<Link href={`/game/${index}`}>
 								<picture>
 									<source srcSet={item.thumbnailImg} media="(max-width: 768px)" />
 									<Image src={item.thumbnailImg} alt={`${item.title} game`} width={1920} height={1080} priority />
 								</picture>
 								<h2>{item.title}</h2>
-								<p>{item.description}</p>
+								<p className={styles.description}>{item.description}</p>
+								<p className={styles.rating}>{item.rating}</p>
 							</Link>
 						</div>
 					))}
