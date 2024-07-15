@@ -17,7 +17,12 @@ const CategoryListWrapper = () => {
 
 	useEffect(() => {
 		if (data[activeCategory]) {
-			setCategoryData(data[activeCategory]);
+			// rating 소수점 두 자리 까지만 출력
+			const formattedData = data[activeCategory].map((item) => ({
+				...item,
+				rating: item.rating.toFixed(2),
+			}));
+			setCategoryData(formattedData);
 		}
 	}, [activeCategory]);
 
