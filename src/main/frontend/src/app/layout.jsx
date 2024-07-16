@@ -6,11 +6,11 @@ import Sidebar from "../common/sidebar/page.jsx";
 import Footer from "../common/footer/page.jsx";
 
 // event
-import ResizeHandler from "@/components/ResizeHandler";
+import ResizeHandler from "@/components/ResizeHandler.jsx";
 
 export const metadata = {
-	title: "Game Recommend App",
-	description: "Game Recommend App",
+	title: "Game Recommend App Title",
+	description: "Game Recommend App Description",
 };
 
 export default function RootLayout({ children }) {

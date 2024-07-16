@@ -1,7 +1,8 @@
 "use client";
 
-import styles from "./category.module.scss";
+import styles from "./Category.module.scss";
 import { useRef } from "react";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 export const Category = ({ activeCategory, setActiveCategory }) => {
 	const categoryArray = [
@@ -28,6 +29,10 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 
 	const changeCategory = (keyword) => {
 		setActiveCategory(keyword);
+		fetch(`api/test`).then((res) => {
+			console.log("응답 ->", res);
+		});
+		console.log("hi");
 	};
 
 	const handleMouseDown = (e) => {
@@ -69,16 +74,18 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 			onMouseUp={handleMouseLeaveOrUp}
 			onMouseMove={handleMouseMove}
 		>
+			<div className={styles.blur}></div>
 			<ul className={styles.category}>
 				{categoryArray.map((item, index) => (
-					<button
-						key={index}
-						className={`${styles.category_btn} ${item.keyword === activeCategory ? styles.active : ""}`}
-						onClick={() => handleClick(item.keyword)}
-						type="button"
-					>
-						{item.name}
-					</button>
+					<li key={index}>
+						<button
+							className={`${styles.category_btn} ${item.keyword === activeCategory ? styles.active : ""}`}
+							onClick={() => handleClick(item.keyword)}
+							type="button"
+						>
+							{item.name}
+						</button>
+					</li>
 				))}
 			</ul>
 		</div>
