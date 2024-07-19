@@ -25,13 +25,3 @@
 		}
 	}
 }
-.blur {
-	position: fixed;
-	right: 0;
-	width: 20px;
-	height: 60px;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	z-index: 5;
-	pointer-events: none;
-}

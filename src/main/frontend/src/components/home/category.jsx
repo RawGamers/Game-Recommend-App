@@ -58,6 +58,27 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 		}
 	};
 
+	const handleTouchStart = (e) => {
+		isDragging.current = true;
+		startX.current = e.touches[0].pageX - categoryContainerRef.current.offsetLeft;
+		scrollLeft.current = categoryContainerRef.current.scrollLeft;
+		dragAmount.current = 0;
+	};
+
+	const handleTouchMove = (e) => {
+		if (isDragging.current) {
+			e.preventDefault();
+			const currentX = e.touches[0].pageX - categoryContainerRef.current.offsetLeft;
+			const moveAmount = currentX - startX.current;
+			dragAmount.current += Math.abs(moveAmount);
+			categoryContainerRef.current.scrollLeft = scrollLeft.current - moveAmount;
+		}
+	};
+
+	const handleTouchEnd = () => {
+		isDragging.current = false;
+	};
+
 	const handleClick = (keyword) => {
 		// 드래그 양이 15px 이하일 때만 클릭 이벤트 처리
 		if (dragAmount.current < 15) {
@@ -73,8 +94,10 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 			onMouseLeave={handleMouseLeaveOrUp}
 			onMouseUp={handleMouseLeaveOrUp}
 			onMouseMove={handleMouseMove}
+			onTouchStart={handleTouchStart}
+			onTouchMove={handleTouchMove}
+			onTouchEnd={handleTouchEnd}
 		>
-			<div className={styles.blur}></div>
 			<ul className={styles.category}>
 				{categoryArray.map((item, index) => (
 					<li key={index}>
