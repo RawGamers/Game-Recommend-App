@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./category.module.scss";
+import styles from "./Category.module.scss";
 import { useRef } from "react";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
@@ -29,10 +29,9 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 
 	const changeCategory = (keyword) => {
 		setActiveCategory(keyword);
-		fetch(`api/test`)
-			.then((res) => {
-				console.log("응답 ->", res);
-			})
+		fetch(`api/test`).then((res) => {
+			console.log("응답 ->", res);
+		});
 		console.log("hi");
 	};
 
@@ -59,6 +58,27 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 		}
 	};
 
+	const handleTouchStart = (e) => {
+		isDragging.current = true;
+		startX.current = e.touches[0].pageX - categoryContainerRef.current.offsetLeft;
+		scrollLeft.current = categoryContainerRef.current.scrollLeft;
+		dragAmount.current = 0;
+	};
+
+	const handleTouchMove = (e) => {
+		if (isDragging.current) {
+			e.preventDefault();
+			const currentX = e.touches[0].pageX - categoryContainerRef.current.offsetLeft;
+			const moveAmount = currentX - startX.current;
+			dragAmount.current += Math.abs(moveAmount);
+			categoryContainerRef.current.scrollLeft = scrollLeft.current - moveAmount;
+		}
+	};
+
+	const handleTouchEnd = () => {
+		isDragging.current = false;
+	};
+
 	const handleClick = (keyword) => {
 		// 드래그 양이 15px 이하일 때만 클릭 이벤트 처리
 		if (dragAmount.current < 15) {
@@ -74,17 +94,21 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 			onMouseLeave={handleMouseLeaveOrUp}
 			onMouseUp={handleMouseLeaveOrUp}
 			onMouseMove={handleMouseMove}
+			onTouchStart={handleTouchStart}
+			onTouchMove={handleTouchMove}
+			onTouchEnd={handleTouchEnd}
 		>
 			<ul className={styles.category}>
 				{categoryArray.map((item, index) => (
-					<button
-						key={index}
-						className={`${styles.category_btn} ${item.keyword === activeCategory ? styles.active : ""}`}
-						onClick={() => handleClick(item.keyword)}
-						type="button"
-					>
-						{item.name}
-					</button>
+					<li key={index}>
+						<button
+							className={`${styles.category_btn} ${item.keyword === activeCategory ? styles.active : ""}`}
+							onClick={() => handleClick(item.keyword)}
+							type="button"
+						>
+							{item.name}
+						</button>
+					</li>
 				))}
 			</ul>
 		</div>

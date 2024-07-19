@@ -1,4 +1,4 @@
-import CategoryListWrapper from "../components/home/categoryListWrapper.jsx";
+import CategoryListWrapper from "../components/home/CategoryListWrapper.jsx";
 
 const Home = () => {
 	return <CategoryListWrapper />;
