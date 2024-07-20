@@ -3,6 +3,7 @@
 	overflow-x: hidden;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+	will-change: cursor;
 	&::-webkit-scrollbar {
 		display: none;
 	}
@@ -13,10 +14,10 @@
 		list-style: none;
 		.category_btn {
 			padding: 0.25rem 0.75rem;
-			border: 1px solid #d0c8c8;
 			border-radius: 1rem;
 			background: #222;
 			color: #fff;
+			font-weight: 500;
 			white-space: nowrap;
 			&.active {
 				background: #9c9c9c;
