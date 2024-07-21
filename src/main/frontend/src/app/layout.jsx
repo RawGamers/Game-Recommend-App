@@ -9,6 +9,7 @@ import Footer from "../common/footer/page.jsx";
 import ResizeHandler from "@/components/ResizeHandler.jsx";
 
 export const metadata = {
+	manifest: "/manifest.json",
 	title: "Game Recommend App Title",
 	description: "Game Recommend App Description",
 };
