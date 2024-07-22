@@ -17,7 +17,6 @@ body {
 
 body {
 	margin: 0;
-	padding-top: 60px;
 	font-family: Pretendard;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -67,11 +66,14 @@ textarea {
 	font-family: Pretendard;
 }
 
-.layout_content {
-	padding-left: 240px;
-	min-height: calc(var(--vh, 1vh) * 100 - 60px);
-	display: flex;
-	flex-direction: column;
+.main_layout {
+	padding-top: 60px;
+	&_content {
+		padding-left: 240px;
+		min-height: calc(var(--vh, 1vh) * 100 - 60px);
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .blank {

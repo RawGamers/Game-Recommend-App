@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Board } from "../../assets/svg/icon-board.jsx";
-import styles from "./page.module.scss";
+import styles from "./Sidebar.module.scss";
 
 const menus = [
 	{ path: "/game", name: "인기 게임", query: "popular", icon: Board },
@@ -10,18 +10,20 @@ const menus = [
 
 const SideBar = () => {
 	return (
-		<aside className={styles.container}>
-			<ul>
-				{menus.map((menu, index) => (
-					<li key={index}>
-						<Link href={{ pathname: menu.path, query: menu.query || {} }}>
-							<menu.icon />
-							{menu.name}
-						</Link>
-					</li>
-				))}
-			</ul>
-		</aside>
+		<>
+			<aside className={styles.container}>
+				<ul>
+					{menus.map((menu, index) => (
+						<li key={index}>
+							<Link href={{ pathname: menu.path, query: menu.query || {} }}>
+								<menu.icon />
+								{menu.name}
+							</Link>
+						</li>
+					))}
+				</ul>
+			</aside>
+		</>
 	);
 };
 
