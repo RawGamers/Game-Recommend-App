@@ -1,5 +1,6 @@
 package com.example.gamerecommendapp.controller;
 
+import com.example.gamerecommendapp.Game;
 import com.example.gamerecommendapp.Product;
 import com.example.gamerecommendapp.Scrapper;
 import com.example.gamerecommendapp.service.GameScrapService;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -26,12 +28,11 @@ public class GameController {
     private final GameScrapService gameScrapService;
 
     @GetMapping("/games")
-    public Product getAllGames(
+    public List<Game> getAllGames(
             @RequestParam("category") String category
     ) {
-        gameScrapService.getGameList(category);
-
-        return product;
+        List<Game> gameList = gameScrapService.getGameList(category);
+        return gameList;
     }
 
 }

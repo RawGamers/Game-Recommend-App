@@ -11,7 +11,7 @@ public class Game {
     /** 제목 */
     String title;
     /** 카테고리 */
-    List<String> catgories;
+    List<String> categories;
     /** 이미지 */
     String url;
 }

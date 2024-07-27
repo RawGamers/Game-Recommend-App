@@ -28,6 +28,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 
     implementation "org.jsoup:jsoup:1.16.1"
+
+    implementation 'org.seleniumhq.selenium:selenium-java:4.6.0'
 }
 
 tasks.named('test') {
