@@ -28,10 +28,6 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 
 	const changeCategory = (keyword) => {
 		setActiveCategory(keyword);
-		fetch(`api/games?category=rpg`)
-			.then((res) => res.json())
-			.then((data) => console.log("data", data))
-			.catch((error) => console.log("error is", error));
 	};
 
 	const handleMouseDown = (e) => {
