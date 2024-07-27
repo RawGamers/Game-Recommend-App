@@ -2,8 +2,6 @@
 
 import styles from "./Category.module.scss";
 import { useRef } from "react";
-import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
-
 export const Category = ({ activeCategory, setActiveCategory }) => {
 	const categoryArray = [
 		{ name: "어드벤처", keyword: "adventure" },
@@ -19,6 +17,7 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 		{ name: "서바이벌", keyword: "survival" },
 		{ name: "플랫포머", keyword: "platform" },
 		{ name: "시뮬레이션", keyword: "simulation" },
+		{ name: "RPG", keyword: "rpg" },
 	];
 
 	const categoryContainerRef = useRef(null);
@@ -29,11 +28,10 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 
 	const changeCategory = (keyword) => {
 		setActiveCategory(keyword);
-		fetch(`api/games?rpg`)
+		fetch(`api/games?category=rpg`)
 			.then((res) => res.json())
 			.then((data) => console.log("data", data))
-			.catch(error => console.log("error is", error));
-		console.log("hi");
+			.catch((error) => console.log("error is", error));
 	};
 
 	const handleMouseDown = (e) => {

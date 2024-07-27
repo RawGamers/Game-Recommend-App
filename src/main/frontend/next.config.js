@@ -3,7 +3,14 @@ const withPWA = require("next-pwa")({
 });
 
 const nextConfig = {
-	// 기존 Next.js 설정
+	async rewrites() {
+		return [
+			{
+				source: "/api/:path*",
+				destination: `http://localhost:8080/api/:path*`,
+			},
+		];
+	},
 };
 
 module.exports = withPWA(nextConfig);
