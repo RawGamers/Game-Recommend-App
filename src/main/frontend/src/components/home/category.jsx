@@ -29,9 +29,10 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 
 	const changeCategory = (keyword) => {
 		setActiveCategory(keyword);
-		fetch(`api/test`).then((res) => {
-			console.log("응답 ->", res);
-		});
+		fetch(`api/games?rpg`)
+			.then((res) => res.json())
+			.then((data) => console.log("data", data))
+			.catch(error => console.log("error is", error));
 		console.log("hi");
 	};
 
