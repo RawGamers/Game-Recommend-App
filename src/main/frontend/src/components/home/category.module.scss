@@ -1,8 +1,10 @@
 .categoryContainer {
 	position: relative;
-	overflow-x: hidden;
+	overflow: visible;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
+	overflow-x: visible;
+	overflow-y: hidden;
 	will-change: cursor;
 	&::-webkit-scrollbar {
 		display: none;

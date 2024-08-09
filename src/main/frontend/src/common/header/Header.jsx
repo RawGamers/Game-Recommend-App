@@ -3,50 +3,70 @@
 import Link from "next/link";
 import styles from "./Header.module.scss";
 import { Search } from "@/assets/svg/icon-search.jsx";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
 const Header = () => {
 	const [showSearchBar, setShowSearchBar] = useState(false);
 	const searchBarRef = useRef(null);
-	const searchInputRef = useRef(null);
+	const searchInputContainerRef = useRef(null);
 
-	const showSearchBarHandler = () => {
+	const tempSearchArray = ["search item 1", "search item 2", "search item 3", "search item 4", "search item 5", "search item 6", "search item 7"];
+
+	const handleSearchFocus = () => {
 		setShowSearchBar(true);
 	};
 
-	const handleClickOutside = (event) => {
-		if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {
+	const handleSearchBlur = (event) => {
+		if (
+			searchBarRef.current &&
+			event.relatedTarget &&
+			!searchBarRef.current.contains(event.relatedTarget) &&
+			!event.relatedTarget.closest(`.${styles.recommend}`) &&
+			!event.relatedTarget.closest(`.${styles.search_input_container}`)
+		) {
 			setShowSearchBar(false);
 		}
 	};
 
-	useEffect(() => {
-		document.addEventListener("mousedown", handleClickOutside);
-		return () => {
-			document.removeEventListener("mousedown", handleClickOutside);
-		};
-	}, []);
+	const handleClickOutside = (event) => {
+		if (
+			searchBarRef.current &&
+			!searchBarRef.current.contains(event.target) &&
+			!event.target.closest(`.${styles.recommend}`) &&
+			!event.target.closest(`.${styles.search_input_container}`)
+		) {
+			setShowSearchBar(false);
+		}
+	};
 
 	return (
 		<>
-			<header className={styles.container}>
+			<div className={`${styles.search_focus_cover} ${showSearchBar ? styles.show : ""}`} onClick={handleClickOutside} />
+			<header className={styles.container} onClick={handleClickOutside}>
 				<Link className={styles.logo} href="/">
 					RAW GAMES
 				</Link>
-				<ul>
-					<li className={styles.search_input_container}>
-						{/* https://gg.deals/ */}
+				<ul className={styles.search_auth_wrapper}>
+					<li className={styles.search_input_container} ref={searchInputContainerRef}>
 						<form>
-							<div
-								onClick={showSearchBarHandler}
-								ref={searchBarRef}
-								className={`${styles.search_input_wrapper} ${showSearchBar ? styles.expand : ""}`}
-							>
+							<div ref={searchBarRef} className={`${styles.search_input_wrapper} ${showSearchBar ? styles.expand : ""}`}>
 								<Search />
-								<input ref={searchInputRef} type="search" autoComplete="off" placeholder="검색" />
+								<input type="search" autoComplete="off" placeholder="검색" onFocus={handleSearchFocus} onBlur={handleSearchBlur} />
 							</div>
+							{showSearchBar && (
+								<div className={styles.recommend}>
+									<ul>
+										{tempSearchArray.map((item, index) => (
+											<li key={index}>
+												<button onBlur={handleSearchBlur} type="button">
+													{item}
+												</button>
+											</li>
+										))}
+									</ul>
+								</div>
+							)}
 						</form>
-						<div className={styles.recommend}>dd</div>
 					</li>
 					<li>
 						<Link href="/auth/sign-in">로그인</Link>
