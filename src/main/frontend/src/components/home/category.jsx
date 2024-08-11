@@ -13,11 +13,10 @@ export const Category = ({ activeCategory, setActiveCategory }) => {
 		{ name: "슈팅", keyword: "shooting" },
 		{ name: "전략", keyword: "strategy" },
 		{ name: "인디", keyword: "indie" },
-		{ name: "롤플레이", keyword: "role" },
+		{ name: "롤플레이", keyword: "rpg" },
 		{ name: "서바이벌", keyword: "survival" },
 		{ name: "플랫포머", keyword: "platform" },
 		{ name: "시뮬레이션", keyword: "simulation" },
-		{ name: "RPG", keyword: "rpg" },
 	];
 
 	const categoryContainerRef = useRef(null);
