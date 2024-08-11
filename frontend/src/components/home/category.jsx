@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Category.module.scss";
+import styles from "./category.module.scss";
 import { useRef } from "react";
 import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 

@@ -1,12 +1,12 @@
 "use client";
 
-import styles from "./CategoryListWrapper.module.scss";
+import styles from "./categoryListWrapper.module.scss";
 import { useState, useEffect, useMemo, Suspense } from "react";
-import data from "/public/data.json";
+import data from "../../../public/data.json";
 
 // components
-import Category from "./Category.jsx";
-import List from "./List.jsx";
+import Category from "./category.jsx";
+import List from "./list.jsx";
 import ListLoading from "@/components/ListLoading.jsx";
 
 const CategoryListWrapper = () => {
