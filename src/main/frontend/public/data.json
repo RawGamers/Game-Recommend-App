@@ -53,7 +53,7 @@
 		{ "title": "Indie Title 3", "description": "Indie Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.27 },
 		{ "title": "Indie Title 4", "description": "Indie Description 4", "thumbnailImg": "/img/game.jpg", "rating": 9.08 }
 	],
-	"role": [
+	"rpg": [
 		{ "title": "Role-playing Title 1", "description": "Role-playing Description 1", "thumbnailImg": "/img/game.jpg", "rating": 8.91 },
 		{ "title": "Role-playing Title 2", "description": "Role-playing Description 2", "thumbnailImg": "/img/game.jpg", "rating": 9.33 },
 		{ "title": "Role-playing Title 3", "description": "Role-playing Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.02 },

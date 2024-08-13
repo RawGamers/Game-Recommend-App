@@ -4,7 +4,7 @@ import styles from "./Sidebar.module.scss";
 
 const menus = [
 	{ path: "/game", name: "인기 게임", query: "popular", icon: Board },
-	{ path: "/game", name: "신작 게임", query: "new", icon: Board },
+	{ path: "/game", name: "신규 게임", query: "new", icon: Board },
 	{ path: "/", name: "게시판", icon: Board },
 ];
 
