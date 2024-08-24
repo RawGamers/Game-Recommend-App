@@ -1,80 +1,80 @@
 {
 	"adventure": [
-		{ "title": "Adventure Title 1", "description": "Adventure Description 1", "thumbnailImg": "/img/game.jpg", "rating": 9.21 },
-		{ "title": "Adventure Title 2", "description": "Adventure Description 2", "thumbnailImg": "/img/game.jpg", "rating": 8.73 },
-		{ "title": "Adventure Title 3", "description": "Adventure Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.47 },
-		{ "title": "Adventure Title 4", "description": "Adventure Description 4", "thumbnailImg": "/img/game.jpg", "rating": 8.91 }
+		{ "title": "Adventure Title 1", "description": "Adventure Description 1", "thumbnailImg": "/img/test2.png", "rating": 9.21 },
+		{ "title": "Adventure Title 2", "description": "Adventure Description 2", "thumbnailImg": "/img/test1.png", "rating": 8.73 },
+		{ "title": "Adventure Title 3", "description": "Adventure Description 3", "thumbnailImg": "/img/test1.png", "rating": 9.47 },
+		{ "title": "Adventure Title 4", "description": "Adventure Description 4", "thumbnailImg": "/img/test1.png", "rating": 8.91 }
 	],
 	"puzzle": [
-		{ "title": "Puzzle Title 1", "description": "Puzzle Description 1", "thumbnailImg": "/img/game.jpg", "rating": 8.56 },
-		{ "title": "Puzzle Title 2", "description": "Puzzle Description 2", "thumbnailImg": "/img/game.jpg", "rating": 9.12 },
-		{ "title": "Puzzle Title 3", "description": "Puzzle Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.38 },
-		{ "title": "Puzzle Title 4", "description": "Puzzle Description 4", "thumbnailImg": "/img/game.jpg", "rating": 8.74 }
+		{ "title": "Puzzle Title 1", "description": "Puzzle Description 1", "thumbnailImg": "/img/test1.png", "rating": 8.56 },
+		{ "title": "Puzzle Title 2", "description": "Puzzle Description 2", "thumbnailImg": "/img/test2.png", "rating": 9.12 },
+		{ "title": "Puzzle Title 3", "description": "Puzzle Description 3", "thumbnailImg": "/img/test1.png", "rating": 9.38 },
+		{ "title": "Puzzle Title 4", "description": "Puzzle Description 4", "thumbnailImg": "/img/test1.png", "rating": 8.74 }
 	],
 	"rhythm": [
-		{ "title": "Rhythm Title 1", "description": "Rhythm Description 1", "thumbnailImg": "/img/game.jpg", "rating": 9.65 },
-		{ "title": "Rhythm Title 2", "description": "Rhythm Description 2", "thumbnailImg": "/img/game.jpg", "rating": 8.92 },
-		{ "title": "Rhythm Title 3", "description": "Rhythm Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.11 },
-		{ "title": "Rhythm Title 4", "description": "Rhythm Description 4", "thumbnailImg": "/img/game.jpg", "rating": 8.89 }
+		{ "title": "Rhythm Title 1", "description": "Rhythm Description 1", "thumbnailImg": "/img/test1.png", "rating": 9.65 },
+		{ "title": "Rhythm Title 2", "description": "Rhythm Description 2", "thumbnailImg": "/img/test1.png", "rating": 8.92 },
+		{ "title": "Rhythm Title 3", "description": "Rhythm Description 3", "thumbnailImg": "/img/test2.png", "rating": 9.11 },
+		{ "title": "Rhythm Title 4", "description": "Rhythm Description 4", "thumbnailImg": "/img/test1.png", "rating": 8.89 }
 	],
 	"sports": [
-		{ "title": "Sports Title 1", "description": "Sports Description 1", "thumbnailImg": "/img/game.jpg", "rating": 9.23 },
-		{ "title": "Sports Title 2", "description": "Sports Description 2", "thumbnailImg": "/img/game.jpg", "rating": 8.79 },
-		{ "title": "Sports Title 3", "description": "Sports Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.05 },
-		{ "title": "Sports Title 4", "description": "Sports Description 4", "thumbnailImg": "/img/game.jpg", "rating": 8.88 }
+		{ "title": "Sports Title 1", "description": "Sports Description 1", "thumbnailImg": "/img/test1.png", "rating": 9.23 },
+		{ "title": "Sports Title 2", "description": "Sports Description 2", "thumbnailImg": "/img/test1.png", "rating": 8.79 },
+		{ "title": "Sports Title 3", "description": "Sports Description 3", "thumbnailImg": "/img/test1.png", "rating": 9.05 },
+		{ "title": "Sports Title 4", "description": "Sports Description 4", "thumbnailImg": "/img/test2.png", "rating": 8.88 }
 	],
 	"racing": [
-		{ "title": "Racing Title 1", "description": "Racing Description 1", "thumbnailImg": "/img/game.jpg", "rating": 8.94 },
-		{ "title": "Racing Title 2", "description": "Racing Description 2", "thumbnailImg": "/img/game.jpg", "rating": 9.19 },
-		{ "title": "Racing Title 3", "description": "Racing Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.34 },
-		{ "title": "Racing Title 4", "description": "Racing Description 4", "thumbnailImg": "/img/game.jpg", "rating": 8.77 }
+		{ "title": "Racing Title 1", "description": "Racing Description 1", "thumbnailImg": "/img/test2.png", "rating": 8.94 },
+		{ "title": "Racing Title 2", "description": "Racing Description 2", "thumbnailImg": "/img/test1.png", "rating": 9.19 },
+		{ "title": "Racing Title 3", "description": "Racing Description 3", "thumbnailImg": "/img/test1.png", "rating": 9.34 },
+		{ "title": "Racing Title 4", "description": "Racing Description 4", "thumbnailImg": "/img/test1.png", "rating": 8.77 }
 	],
 	"fighting": [
-		{ "title": "Fighting Title 1", "description": "Fighting Description 1", "thumbnailImg": "/img/game.jpg", "rating": 9.43 },
-		{ "title": "Fighting Title 2", "description": "Fighting Description 2", "thumbnailImg": "/img/game.jpg", "rating": 9.02 },
-		{ "title": "Fighting Title 3", "description": "Fighting Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.26 },
-		{ "title": "Fighting Title 4", "description": "Fighting Description 4", "thumbnailImg": "/img/game.jpg", "rating": 8.71 }
+		{ "title": "Fighting Title 1", "description": "Fighting Description 1", "thumbnailImg": "/img/test1.png", "rating": 9.43 },
+		{ "title": "Fighting Title 2", "description": "Fighting Description 2", "thumbnailImg": "/img/test2.png", "rating": 9.02 },
+		{ "title": "Fighting Title 3", "description": "Fighting Description 3", "thumbnailImg": "/img/test1.png", "rating": 9.26 },
+		{ "title": "Fighting Title 4", "description": "Fighting Description 4", "thumbnailImg": "/img/test1.png", "rating": 8.71 }
 	],
 	"shooting": [
-		{ "title": "Shooting Title 1", "description": "Shooting Description 1", "thumbnailImg": "/img/game.jpg", "rating": 9.37 },
-		{ "title": "Shooting Title 2", "description": "Shooting Description 2", "thumbnailImg": "/img/game.jpg", "rating": 8.85 },
-		{ "title": "Shooting Title 3", "description": "Shooting Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.14 },
-		{ "title": "Shooting Title 4", "description": "Shooting Description 4", "thumbnailImg": "/img/game.jpg", "rating": 9.06 }
+		{ "title": "Shooting Title 1", "description": "Shooting Description 1", "thumbnailImg": "/img/test1.png", "rating": 9.37 },
+		{ "title": "Shooting Title 2", "description": "Shooting Description 2", "thumbnailImg": "/img/test1.png", "rating": 8.85 },
+		{ "title": "Shooting Title 3", "description": "Shooting Description 3", "thumbnailImg": "/img/test2.png", "rating": 9.14 },
+		{ "title": "Shooting Title 4", "description": "Shooting Description 4", "thumbnailImg": "/img/test1.png", "rating": 9.06 }
 	],
 	"strategy": [
-		{ "title": "Strategy Title 1", "description": "Strategy Description 1", "thumbnailImg": "/img/game.jpg", "rating": 8.93 },
-		{ "title": "Strategy Title 2", "description": "Strategy Description 2", "thumbnailImg": "/img/game.jpg", "rating": 9.48 },
-		{ "title": "Strategy Title 3", "description": "Strategy Description 3", "thumbnailImg": "/img/game.jpg", "rating": 8.77 },
-		{ "title": "Strategy Title 4", "description": "Strategy Description 4", "thumbnailImg": "/img/game.jpg", "rating": 9.21 }
+		{ "title": "Strategy Title 1", "description": "Strategy Description 1", "thumbnailImg": "/img/test1.png", "rating": 8.93 },
+		{ "title": "Strategy Title 2", "description": "Strategy Description 2", "thumbnailImg": "/img/test1.png", "rating": 9.48 },
+		{ "title": "Strategy Title 3", "description": "Strategy Description 3", "thumbnailImg": "/img/test1.png", "rating": 8.77 },
+		{ "title": "Strategy Title 4", "description": "Strategy Description 4", "thumbnailImg": "/img/test2.png", "rating": 9.21 }
 	],
 	"indie": [
-		{ "title": "Indie Title 1", "description": "Indie Description 1", "thumbnailImg": "/img/game.jpg", "rating": 9.15 },
-		{ "title": "Indie Title 2", "description": "Indie Description 2", "thumbnailImg": "/img/game.jpg", "rating": 8.84 },
-		{ "title": "Indie Title 3", "description": "Indie Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.27 },
-		{ "title": "Indie Title 4", "description": "Indie Description 4", "thumbnailImg": "/img/game.jpg", "rating": 9.08 }
+		{ "title": "Indie Title 1", "description": "Indie Description 1", "thumbnailImg": "/img/test2.png", "rating": 9.15 },
+		{ "title": "Indie Title 2", "description": "Indie Description 2", "thumbnailImg": "/img/test1.png", "rating": 8.84 },
+		{ "title": "Indie Title 3", "description": "Indie Description 3", "thumbnailImg": "/img/test1.png", "rating": 9.27 },
+		{ "title": "Indie Title 4", "description": "Indie Description 4", "thumbnailImg": "/img/test1.png", "rating": 9.08 }
 	],
 	"rpg": [
-		{ "title": "Role-playing Title 1", "description": "Role-playing Description 1", "thumbnailImg": "/img/game.jpg", "rating": 8.91 },
-		{ "title": "Role-playing Title 2", "description": "Role-playing Description 2", "thumbnailImg": "/img/game.jpg", "rating": 9.33 },
-		{ "title": "Role-playing Title 3", "description": "Role-playing Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.02 },
-		{ "title": "Role-playing Title 4", "description": "Role-playing Description 4", "thumbnailImg": "/img/game.jpg", "rating": 9.17 }
+		{ "title": "Role-playing Title 1", "description": "Role-playing Description 1", "thumbnailImg": "/img/test1.png", "rating": 8.91 },
+		{ "title": "Role-playing Title 2", "description": "Role-playing Description 2", "thumbnailImg": "/img/test2.png", "rating": 9.33 },
+		{ "title": "Role-playing Title 3", "description": "Role-playing Description 3", "thumbnailImg": "/img/test1.png", "rating": 9.02 },
+		{ "title": "Role-playing Title 4", "description": "Role-playing Description 4", "thumbnailImg": "/img/test1.png", "rating": 9.17 }
 	],
 	"survival": [
-		{ "title": "Survival Title 1", "description": "Survival Description 1", "thumbnailImg": "/img/game.jpg", "rating": 9.07 },
-		{ "title": "Survival Title 2", "description": "Survival Description 2", "thumbnailImg": "/img/game.jpg", "rating": 8.99 },
-		{ "title": "Survival Title 3", "description": "Survival Description 3", "thumbnailImg": "/img/game.jpg", "rating": 9.31 },
-		{ "title": "Survival Title 4", "description": "Survival Description 4", "thumbnailImg": "/img/game.jpg", "rating": 9.12 }
+		{ "title": "Survival Title 1", "description": "Survival Description 1", "thumbnailImg": "/img/test1.png", "rating": 9.07 },
+		{ "title": "Survival Title 2", "description": "Survival Description 2", "thumbnailImg": "/img/test1.png", "rating": 8.99 },
+		{ "title": "Survival Title 3", "description": "Survival Description 3", "thumbnailImg": "/img/test2.png", "rating": 9.31 },
+		{ "title": "Survival Title 4", "description": "Survival Description 4", "thumbnailImg": "/img/test1.png", "rating": 9.12 }
 	],
 	"platform": [
-		{ "title": "Platform Title 1", "description": "Platform Description 1", "thumbnailImg": "/img/game.jpg", "rating": 8.72 },
-		{ "title": "Platform Title 2", "description": "Platform Description 2", "thumbnailImg": "/img/game.jpg", "rating": 9.19 },
-		{ "title": "Platform Title 3", "description": "Platform Description 3", "thumbnailImg": "/img/game.jpg", "rating": 8.85 },
-		{ "title": "Platform Title 4", "description": "Platform Description 4", "thumbnailImg": "/img/game.jpg", "rating": 9.41 }
+		{ "title": "Platform Title 1", "description": "Platform Description 1", "thumbnailImg": "/img/test1.png", "rating": 8.72 },
+		{ "title": "Platform Title 2", "description": "Platform Description 2", "thumbnailImg": "/img/test1.png", "rating": 9.19 },
+		{ "title": "Platform Title 3", "description": "Platform Description 3", "thumbnailImg": "/img/test1.png", "rating": 8.85 },
+		{ "title": "Platform Title 4", "description": "Platform Description 4", "thumbnailImg": "/img/test2.png", "rating": 9.41 }
 	],
 	"simulation": [
-		{ "title": "Simulation Title 1", "description": "Simulation Description 1", "thumbnailImg": "/img/game.jpg", "rating": 8.79 },
-		{ "title": "Simulation Title 2", "description": "Simulation Description 2", "thumbnailImg": "/img/game.jpg", "rating": 9.38 },
-		{ "title": "Simulation Title 3", "description": "Simulation Description 3", "thumbnailImg": "/img/game.jpg", "rating": 8.92 },
-		{ "title": "Simulation Title 4", "description": "Simulation Description 4", "thumbnailImg": "/img/game.jpg", "rating": 9.11 }
+		{ "title": "Simulation Title 1", "description": "Simulation Description 1", "thumbnailImg": "/img/test2.png", "rating": 8.79 },
+		{ "title": "Simulation Title 2", "description": "Simulation Description 2", "thumbnailImg": "/img/test1.png", "rating": 9.38 },
+		{ "title": "Simulation Title 3", "description": "Simulation Description 3", "thumbnailImg": "/img/test1.png", "rating": 8.92 },
+		{ "title": "Simulation Title 4", "description": "Simulation Description 4", "thumbnailImg": "/img/test1.png", "rating": 9.11 }
 	]
 }

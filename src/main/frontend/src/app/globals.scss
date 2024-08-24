@@ -41,7 +41,8 @@ h4,
 h5,
 ul,
 input,
-button {
+button,
+figure {
 	margin: 0;
 }
 
@@ -73,6 +74,8 @@ textarea {
 		min-height: calc(var(--vh, 1vh) * 100 - 60px);
 		display: flex;
 		flex-direction: column;
+		transition: padding 0.4s linear;
+		will-change: padding;
 	}
 }
 
