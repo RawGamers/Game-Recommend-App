@@ -13,36 +13,25 @@ const menus = [
 ];
 
 const SideBar = () => {
-	// 즉각적으로 상태를 변경하기 위한 state
-	const [isRotated, setIsRotated] = useState(false);
-	// 지연된 상태를 관리하기 위한 state
-	const [delayedRotate, setDelayedRotate] = useState(false);
+	const [isRotated, setIsRotated] = useState(true);
 
 	const handleToggle = () => {
-		// 즉각적으로 padding-left 등을 변경하기 위해 isRotated 사용
 		setIsRotated(!isRotated);
 
-		// 0.5초 지연 후에 delayedRotate 상태 변경
-		setTimeout(() => {
-			setDelayedRotate(!isRotated);
-		}, 400);
-
-		// padding-left를 즉시 변경
-		setTimeout(() => {
-			const mainContent = document.querySelector(".main_layout_content");
-			if (mainContent) {
-				mainContent.style.paddingLeft = isRotated ? "250px" : "0";
-			}
-		}, 200);
+		const mainContent = document.querySelector(".main_layout");
+		if (mainContent) {
+			mainContent.style.transform = isRotated ? "translate3d(240px, 0, 0)" : "translate3d(0, 0, 0)";
+		}
+		// https://tympanus.net/Development/SidebarTransitions/
 	};
 
 	return (
 		<>
-			<aside className={`${styles.container} ${delayedRotate ? styles.rotate : ""}`}>
+			<button className={styles.test} type="button" onClick={handleToggle}>
+				side
+			</button>
+			<aside className={styles.container}>
 				<div className={`${styles.wrapper} ${isRotated ? styles.rotate : ""}`}>
-					<button type="button" onClick={handleToggle}>
-						side
-					</button>
 					<ul>
 						{menus.map((menu, index) => (
 							<li key={index}>
@@ -54,6 +43,7 @@ const SideBar = () => {
 						))}
 					</ul>
 				</div>
+				<div className={styles.cover} onClick={handleToggle} />
 			</aside>
 		</>
 	);

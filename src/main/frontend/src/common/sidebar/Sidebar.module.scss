@@ -1,34 +1,29 @@
 .container {
 	position: fixed;
-	left: 0;
+	padding-top: 60px;
 	width: 240px;
-	height: calc(var(--vh) * 100 - 60px);
-	background: #262f38;
-	transition: width 0.4s linear;
-	transform-origin: 100% 50%;
-	white-space: nowrap;
-	perspective: 2500px;
-	overflow: hidden;
-	&.rotate {
-		width: 0;
-	}
+	height: calc(var(--vh) * 100);
+	display: flex;
+
+	perspective: 700px;
+	transform-style: preserve-3d;
+	z-index: 1;
 	.wrapper {
+		position: relative;
 		padding: 0 20px;
 		width: 100%;
 		height: 100%;
-		-webkit-transform: rotateY(0);
-		transform: rotateY(0);
-		-webkit-transform-origin: 100% 50%;
+		background: #48a770;
+		white-space: nowrap;
 		transform-origin: 100% 50%;
-		-webkit-transform-style: preserve-3d;
-		transform-style: preserve-3d;
-		-webkit-transition: transform 0.4s linear;
-		transition: transform 0.4s linear;
+		backface-visibility: hidden;
+		z-index: 1;
+
+		transition: transform 0.5s;
 		will-change: transform;
-		background: green;
+		transform: translate3d(0, 0, 0) rotateY(0);
 		&.rotate {
-			-webkit-transform: rotateY(-90deg);
-			transform: rotateY(-90deg);
+			transform: translate3d(-240px, 0, 0) rotateY(-90deg);
 		}
 		ul {
 			display: flex;
@@ -58,4 +53,19 @@
 			}
 		}
 	}
+	.cover {
+		position: absolute;
+		background: rgba(0, 0, 0, 0.3);
+		width: 100vw;
+		height: 100%;
+		cursor: pointer;
+	}
+}
+
+.test {
+	position: fixed;
+	top: 250px;
+	left: 200px;
+	z-index: 999;
+	background: red;
 }
