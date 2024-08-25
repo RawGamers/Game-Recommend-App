@@ -30,11 +30,12 @@ public class SteamWeb implements ScrapService {
 
     private String baseUrl = "https://store.steampowered.com/category/";
 
-    private final Logger log = LoggerFactory.getLogger(getClass());
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     @Override
     public List<Game> scrapGame(String category) {
 
+        logger.info("scrapGame");
         String url = baseUrl + category;
 
 //        System.setProperty("")
@@ -55,7 +56,7 @@ public class SteamWeb implements ScrapService {
             Thread.sleep(3000);
 
             List<WebElement> elements = driver.findElements(By.cssSelector(".gASJ2lL_xmVNuZkWGvrWg"));
-
+            logger.info("elements {}", elements.toString());
             gameList = elements.stream()
                     .map(element -> {
                         String title = element.findElement(By.cssSelector(".StoreSaleWidgetTitle")).getText();
@@ -75,7 +76,7 @@ public class SteamWeb implements ScrapService {
                     .collect(Collectors.toList());
 
         } catch (Exception e) {
-            log.error(e.getMessage());
+            logger.error(e.getMessage());
         } finally {
             driver.close();
         }

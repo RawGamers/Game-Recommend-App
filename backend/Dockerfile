@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Define Geckodriver version as a build argument
-ARG GECKODRIVER_VERSION=0.33.0
+ARG GECKODRIVER_VERSION=0.35.0
 RUN wget -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v${GECKODRIVER_VERSION}/geckodriver-v${GECKODRIVER_VERSION}-linux64.tar.gz \
     && tar -xzf /tmp/geckodriver.tar.gz -C /usr/bin \
     && chmod +x /usr/bin/geckodriver \
