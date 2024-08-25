@@ -38,7 +38,7 @@ public class SteamWeb implements ScrapService {
         logger.info("scrapGame");
         String url = baseUrl + category;
 
-        System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
 //        System.setProperty("")
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         firefoxOptions.addArguments("--headless"); // 스크래핑 과정을 확인할 때는 제거하면 된다.
