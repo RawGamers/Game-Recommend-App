@@ -1,17 +1,10 @@
-version: '3'
 services:
-
   backend:
-    image: "cheon123/backend:1.0"
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
     container_name: backend
     ports:
       - "8080:8080"
     environment:
       - SPRING.PROFILES.ACTIVE=default
-#  frontend:
-#    image: "cheon123/frontend:1.0"
-#    container_name: frontend
-#    ports:
-#      - "3000:3000"
-#    links:
-#      - backend
