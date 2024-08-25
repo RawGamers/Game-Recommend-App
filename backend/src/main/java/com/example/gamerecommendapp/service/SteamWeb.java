@@ -11,6 +11,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -35,7 +37,14 @@ public class SteamWeb implements ScrapService {
 
         String url = baseUrl + category;
 
-        WebDriver driver = new ChromeDriver();
+//        System.setProperty("")
+        FirefoxOptions firefoxOptions = new FirefoxOptions();
+        firefoxOptions.addArguments("--headless"); // 스크래핑 과정을 확인할 때는 제거하면 된다.
+        firefoxOptions.addArguments("--disable-gpu");
+        firefoxOptions.addArguments("--no-sandbox");
+        firefoxOptions.addArguments("--disable-dev-shm-usage");
+
+        WebDriver driver = new FirefoxDriver(firefoxOptions);
         driver.get(url);
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
