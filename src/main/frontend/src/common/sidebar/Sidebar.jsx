@@ -13,16 +13,19 @@ const menus = [
 ];
 
 const SideBar = () => {
-	const [isRotated, setIsRotated] = useState(true);
+	const [sidebarOpen, setSidebarOpen] = useState(true);
 
 	const handleToggle = () => {
-		setIsRotated(!isRotated);
+		setSidebarOpen(!sidebarOpen);
 
 		const mainContent = document.querySelector(".main_layout");
+		const contentCover = document.querySelector(".content_cover");
 		if (mainContent) {
-			mainContent.style.transform = isRotated ? "translate3d(240px, 0, 0)" : "translate3d(0, 0, 0)";
+			mainContent.style.transform = sidebarOpen ? "translate3d(240px, 0, 0)" : "translate3d(0, 0, 0)";
+			contentCover.style.opacity = sidebarOpen ? 1 : 0;
+			contentCover.style.pointerEvents = sidebarOpen ? "auto" : "none";
+			// contentCover 클릭 시 handleToggle()
 		}
-		// https://tympanus.net/Development/SidebarTransitions/
 	};
 
 	return (
@@ -31,7 +34,7 @@ const SideBar = () => {
 				side
 			</button>
 			<aside className={styles.container}>
-				<div className={`${styles.wrapper} ${isRotated ? styles.rotate : ""}`}>
+				<div className={`${styles.wrapper} ${sidebarOpen ? styles.rotate : ""}`}>
 					<ul>
 						{menus.map((menu, index) => (
 							<li key={index}>
@@ -43,7 +46,6 @@ const SideBar = () => {
 						))}
 					</ul>
 				</div>
-				<div className={styles.cover} onClick={handleToggle} />
 			</aside>
 		</>
 	);

@@ -81,6 +81,20 @@ textarea {
 	will-change: transform;
 }
 
+.content_cover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.5s;
+	z-index: 1;
+	cursor: pointer;
+}
+
 .blank {
 	height: 500px;
 	background: rgba(0, 0, 0, 0.5);

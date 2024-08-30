@@ -19,7 +19,8 @@ export default function RootLayout({ children }) {
 				<Header />
 				<Sidebar />
 				<div className="main_layout">
-					<div className="view">{children}</div>
+					<div className="content_cover" />
+					{children}
 					<Footer />
 				</div>
 				<ResizeHandler />

@@ -3,17 +3,18 @@
 	padding: 3rem 1.5rem;
 	display: grid;
 	grid-template-areas:
-		"thumbnail info"
-		"description description";
+		"thumbnail aside"
+		"article article";
 	grid-template-columns: 7fr 3fr;
 	@media screen and (max-width: 768px) {
 		grid-template-areas:
 			"thumbnail"
-			"info"
-			"description";
+			"aside"
+			"article";
 		grid-template-columns: 1fr;
 	}
-	.background {
+	&::after {
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -59,8 +60,8 @@
 			}
 		}
 	}
-	.info_wrapper {
-		grid-area: info;
+	aside {
+		grid-area: aside;
 		padding: 1rem;
 		border-radius: 0 0.5rem 0 0;
 		background: #fff;
@@ -69,7 +70,9 @@
 			border-radius: 0;
 		}
 	}
-	.description {
-		grid-area: description;
+	article {
+		grid-area: article;
+		margin-top: 1rem;
+		color: #222;
 	}
 }

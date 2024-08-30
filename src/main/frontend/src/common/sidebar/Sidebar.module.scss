@@ -3,11 +3,11 @@
 	padding-top: 60px;
 	width: 240px;
 	height: calc(var(--vh) * 100);
-	display: flex;
 
 	perspective: 700px;
 	transform-style: preserve-3d;
 	z-index: 1;
+	pointer-events: none;
 	.wrapper {
 		position: relative;
 		padding: 0 20px;
@@ -18,6 +18,7 @@
 		transform-origin: 100% 50%;
 		backface-visibility: hidden;
 		z-index: 1;
+		pointer-events: auto;
 
 		transition: transform 0.5s;
 		will-change: transform;
@@ -53,13 +54,6 @@
 			}
 		}
 	}
-	.cover {
-		position: absolute;
-		background: rgba(0, 0, 0, 0.3);
-		width: 100vw;
-		height: 100%;
-		cursor: pointer;
-	}
 }
 
 .test {
@@ -68,4 +62,30 @@
 	left: 200px;
 	z-index: 999;
 	background: red;
+}
+
+/* globals.scss */
+.main_layout {
+	transition: transform 0.3s ease;
+}
+
+.main_layout.shifted {
+	transform: translate3d(240px, 0, 0); /* Shift the content to the right when sidebar is open */
+}
+
+.content_cover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+
+.main_layout.shifted .content_cover {
+	opacity: 1;
+	pointer-events: auto;
 }
