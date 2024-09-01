@@ -11,6 +11,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.slf4j.Logger;
@@ -32,21 +33,34 @@ public class SteamWeb implements ScrapService {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
+
+    private final String WEB_DRIVER_ID = "webdriver.chrome.driver";
+    private String WEB_DRIVER_PATH = "chromedriver";
+
     @Override
     public List<Game> scrapGame(String category) {
 
+        System.setProperty(WEB_DRIVER_ID, WEB_DRIVER_PATH);
         logger.info("scrapGame");
         String url = baseUrl + category;
         logger.info("url -> {}", url);
 
-        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.addArguments("--headless"); // 스크래핑 과정을 확인할 때는 제거하면 된다.
-        firefoxOptions.addArguments("--window-size=1920,1080");
-        firefoxOptions.addArguments("--disable-gpu");
-        firefoxOptions.addArguments("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-popup-blocking");
+        options.addArguments("--disable-default-apps");
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-blink-features=AutomationControlled");
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--single-process");
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--ignore-ssl-errors=yes");
+        options.addArguments("--ignore-certificate-errors");
+        options.addArguments("--remote-debugging-port=9222");
+        options.addArguments("--window-size=1920, 1080");
 
-        WebDriver driver = new FirefoxDriver(firefoxOptions);
+        WebDriver driver = new ChromeDriver(options);
         driver.get(url);
 
         logger.info("driver info {}", driver.getTitle());
