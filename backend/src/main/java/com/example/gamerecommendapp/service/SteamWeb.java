@@ -40,27 +40,19 @@ public class SteamWeb implements ScrapService {
     @Override
     public List<Game> scrapGame(String category) {
 
-        System.setProperty(WEB_DRIVER_ID, WEB_DRIVER_PATH);
+
+        System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+
         logger.info("scrapGame");
         String url = baseUrl + category;
         logger.info("url -> {}", url);
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-popup-blocking");
-        options.addArguments("--disable-default-apps");
-        options.addArguments("--disable-notifications");
-        options.addArguments("--disable-blink-features=AutomationControlled");
-        options.addArguments("--remote-allow-origins=*");
-        options.addArguments("--single-process");
+        FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--ignore-ssl-errors=yes");
-        options.addArguments("--ignore-certificate-errors");
-        options.addArguments("--remote-debugging-port=9222");
         options.addArguments("--window-size=1920, 1080");
 
-        WebDriver driver = new ChromeDriver(options);
+        WebDriver driver = new FirefoxDriver(options);
         driver.get(url);
 
         logger.info("driver info {}", driver.getTitle());
@@ -68,7 +60,7 @@ public class SteamWeb implements ScrapService {
 
         List<WebElement> elements1 = driver.findElements(By.cssSelector(".content"));
         elements1.forEach((data) -> {
-            logger.info("data {}", data);
+            logger.info("data {}", data.getText());
         });
 
 
