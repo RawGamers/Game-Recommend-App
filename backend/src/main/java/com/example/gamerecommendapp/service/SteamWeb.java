@@ -37,7 +37,7 @@ public class SteamWeb implements ScrapService {
 
         logger.info("scrapGame");
         String url = baseUrl + category;
-        logger.info("url ->", url);
+        logger.info("url -> {}", url);
 
         System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
         FirefoxOptions firefoxOptions = new FirefoxOptions();
@@ -49,10 +49,10 @@ public class SteamWeb implements ScrapService {
         WebDriver driver = new FirefoxDriver(firefoxOptions);
         driver.get(url);
 
-        logger.info("driver info", driver.getTitle());
-        logger.info("driver info", driver.getCurrentUrl());
+        logger.info("driver info {}", driver.getTitle());
+        logger.info("driver info {}", driver.getCurrentUrl());
 
-        logger.info("content", driver.findElements(By.cssSelector(".content")));
+        logger.info("content {}", driver.findElements(By.cssSelector(".content")));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,2500)", "");
