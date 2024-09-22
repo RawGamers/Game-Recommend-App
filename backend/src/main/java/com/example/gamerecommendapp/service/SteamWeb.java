@@ -69,7 +69,7 @@ public class SteamWeb implements ScrapService {
 
         List<Game> gameList = new ArrayList();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(10000);
 
             List<WebElement> elements = driver.findElements(By.cssSelector(".gASJ2lL_xmVNuZkWGvrWg"));
             logger.info("elements {}", elements.toString());
