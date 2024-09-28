@@ -17,11 +17,12 @@ export default function RootLayout({ children }) {
 		<html lang="ko">
 			<body>
 				<Header />
-				<Sidebar />
 				<div className="main_layout">
-					<div className="content_cover" />
-					{children}
-					<Footer />
+					<Sidebar />
+					<div className="view_footer">
+						{children}
+						<Footer />
+					</div>
 				</div>
 				<ResizeHandler />
 			</body>

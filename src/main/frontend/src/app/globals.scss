@@ -1,3 +1,5 @@
+$headerHeight: 60px;
+
 @font-face {
 	font-family: "Pretendard";
 	src: url("../assets/font/PretendardVariable.woff2") format("woff2");
@@ -69,30 +71,16 @@ textarea {
 }
 
 .main_layout {
-	padding-top: 60px;
-	transform-style: preserve-3d;
-	perspective: 1000px;
+	padding-top: $headerHeight;
 	min-height: calc(var(--vh, 1vh) * 100);
 	display: flex;
-	flex-direction: column;
-	background: #ffffff;
-	transition: transform 0.5s;
-	transform: translate3d(0, 0, 0);
-	will-change: transform;
-}
-
-.content_cover {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.4);
-	opacity: 0;
-	pointer-events: none;
-	transition: opacity 0.5s;
-	z-index: 1;
-	cursor: pointer;
+	.view_footer {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		min-width: 100%;
+		background: rgb(240, 240, 240);
+	}
 }
 
 .blank {

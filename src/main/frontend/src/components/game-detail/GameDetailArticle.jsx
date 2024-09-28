@@ -3,7 +3,7 @@ import styles from "./GameDetail.module.scss";
 const GameDetailArticle = () => {
 	return (
 		<article>
-			<h>관련 정보</h>
+			<h1>관련 정보</h1>
 			<p>비슷한 게임</p>
 			<p>게임 카테고리 목록</p>
 			<p>

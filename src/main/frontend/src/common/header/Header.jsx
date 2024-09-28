@@ -2,10 +2,15 @@
 
 import Link from "next/link";
 import styles from "./Header.module.scss";
+import { BurgerBtn } from "@/assets/svg/icon-burger-btn";
 import { Search } from "@/assets/svg/icon-search.jsx";
 import { useRef, useState } from "react";
 
+import useSidebarStore from "@/store/sidebarStore";
+
 const Header = () => {
+	const { toggleSidebar } = useSidebarStore();
+
 	const [showSearchBar, setShowSearchBar] = useState(false);
 	const searchBarRef = useRef(null);
 	const searchInputContainerRef = useRef(null);
@@ -43,9 +48,15 @@ const Header = () => {
 		<>
 			<div className={`${styles.search_focus_cover} ${showSearchBar ? styles.show : ""}`} onClick={handleClickOutside} />
 			<header className={styles.container} onClick={handleClickOutside}>
-				<Link className={styles.logo} href="/">
-					RAW GAMES
-				</Link>
+				<div className={styles.logo_wrapper}>
+					<button type="button" onClick={toggleSidebar} aria-label="open side bar">
+						<BurgerBtn />
+					</button>
+
+					<Link className={styles.logo} href="/">
+						RAW GAMES
+					</Link>
+				</div>
 				<ul className={styles.search_auth_wrapper}>
 					<li className={styles.search_input_container} ref={searchInputContainerRef}>
 						<form>

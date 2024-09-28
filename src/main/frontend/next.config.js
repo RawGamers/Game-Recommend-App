@@ -4,6 +4,7 @@ const withPWA = require("next-pwa")({
 });
 
 const nextConfig = {
+	reactStrictMode: false,
 	async rewrites() {
 		return [
 			{

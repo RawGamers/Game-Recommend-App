@@ -1,13 +1,15 @@
+$headerHeight: 60px;
+
 .search_focus_cover {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(75, 75, 75, 0.3);
+	background: rgba(0, 0, 0, 0.4);
 	opacity: 0;
-	z-index: 1;
-	transition: opacity 0.3s ease-out;
+	z-index: 3;
+	transition: opacity 0.5s ease;
 	will-change: opacity;
 	pointer-events: none;
 	&.show {
@@ -24,15 +26,20 @@
 	align-items: center;
 	padding: 0 20px;
 	width: 100%;
-	height: 60px;
+	height: $headerHeight;
 	background: #232425;
-	z-index: 2;
-	.logo {
-		color: red;
-		font-size: 1.2rem;
-		font-weight: 800;
-		&:hover {
-			color: #ff6224;
+	z-index: 3;
+	.logo_wrapper {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		.logo {
+			color: red;
+			font-size: 1.2rem;
+			font-weight: 800;
+			&:hover {
+				color: #ff6224;
+			}
 		}
 	}
 	.search_auth_wrapper {
